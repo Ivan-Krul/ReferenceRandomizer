@@ -34,12 +34,15 @@ function shuffle() {
     let text = readFromFile(fileLister);
     
     var lines = getDividedString(text);
+
+    console.log(lines);
+
     var rand = getRandomInt(lines.length);
+
+    console.log(lines[rand]);
 
     if(lines[rand] != "")
         document.getElementById("image").src = "./image/Signed/" + lines[rand];
     else
         document.getElementById("image").src = "image/not image.png";
-
-    document.getElementById("author") = "Author: " + lines[rand].split(' ')[0];
 }
