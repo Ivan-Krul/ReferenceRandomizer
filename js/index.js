@@ -30,9 +30,6 @@ function readFromFile(fileURL) {
 }
 
 function shuffle() {
-    document.getElementById("image").src = "./image/Signed/@AnnasVirtual 0.jpg";
-    console.log(document.getElementById("image").src);
-  
     const fileLister = "image/images.txt";
     let text = readFromFile(fileLister);
     
@@ -40,7 +37,7 @@ function shuffle() {
     var rand = getRandomInt(lines.length);
 
     if(lines[rand] != "")
-        document.getElementById("image").src = lines[rand];
+        document.getElementById("image").src = "./image/Signed/" + lines[rand];
     else
         document.getElementById("image").src = "image/not image.png";
 
