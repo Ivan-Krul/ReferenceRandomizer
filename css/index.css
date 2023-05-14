@@ -1,0 +1,13 @@
+.classic h2 {
+	text-align: center;
+	margin: 5px;
+}
+
+.classic{
+	font-family: Ubuntu;
+}
+
+.classic img {
+	border: 5px;
+	padding: 5px;
+}
