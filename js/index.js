@@ -8,14 +8,13 @@ function getRandomInt(max) {
 
 function readFromFile(fileURL) {
     // do not touch this
-    let text = "";
     fetch(fileURL)
     .then(response => response.blob())
     .then(blob => {
         const reader = new FileReader();
         reader.onload = function(event) {
             const fileContent = event.target.result;
-            text = fileContent;
+            return fileContent;
         };
         reader.onerror = function(event) {
             console.error("Error reading file:", event.target.error)
@@ -26,7 +25,7 @@ function readFromFile(fileURL) {
         console.error("Error:", error);
     });
 
-    return text;
+    return "";
 }
 
 function shuffle() {
