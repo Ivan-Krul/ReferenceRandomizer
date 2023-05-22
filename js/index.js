@@ -40,6 +40,8 @@ function pushToDocument(lines)
         document.getElementById("image").src = "./image/Signed/" + lines[rand];
         if(lines[rand].split(' ')[0].indexOf("u-") == 0 && lines[rand].split(' ')[0].indexOf("u-") != null)
             document.getElementById("author").innerText = "Author: "+ "u/" + lines[rand].split(' ')[0].split('u-')[1];
+        else if(lines[rand][0] == '@')
+            document.getElementById("author").innerText = "Author: "+ lines[rand].split(' ')[0];
         else
             document.getElementById("author").innerText = "Author: "+ lines[rand].split(' ')[0];
     }
