@@ -1,11 +1,15 @@
 .classic h2 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	text-align: center;
-	margin: 5px;
+  
+  /*width: 30vw; /* 50% of viewport width */
+  text-align: center;
+  transform: translateX(12.5%);
+	
+	
+  	/*height: 100vh; /* 50% of viewport height */
 }
 
 .classic{
-	font-family: Ubuntu;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	width: 75vw; /* 50% of viewport width */
   	height: 75vh; /* 50% of viewport height */
 }
@@ -19,8 +23,11 @@
 }
 
 .classic button {
+	/*width: 100vw; /* 50% of viewport width */
+  	/*height: 100vh; /* 50% of viewport height */
+  transform: translateX(75%);
 	width: 50%; /* Set initial width */
-  padding: 10px 20px; /* Set initial padding */
-  font-size: 16px; /* Set initial font size */
+	padding: 10px 20px; /* Set initial padding */
+	font-size: 16px; /* Set initial font size */  
 }
 

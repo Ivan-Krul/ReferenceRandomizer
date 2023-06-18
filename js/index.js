@@ -37,13 +37,25 @@ function pushToDocument(lines)
 
     if(lines[rand] != "")
     {
+        var a = document.getElementById("author-link")
         document.getElementById("image").src = "./image/Signed/" + lines[rand];
+
         if(lines[rand].split(' ')[0].indexOf("u-") == 0 && lines[rand].split(' ')[0].indexOf("u-") != null)
-            document.getElementById("author").innerText = "Author: "+ "u/" + lines[rand].split(' ')[0].split('u-')[1];
+        {
+            var res =  lines[rand].split(' ')[0].split('u-')[1];
+            a.href = "https://reddit.com/user/" + res;
+            a.innerText = "u/" +res;
+            document.getElementById("author").innerText = "Author: "+ "u/" + res;
+        }
         else if(lines[rand][0] == '@')
-            document.getElementById("author").innerText = "Author: "+ lines[rand].split(' ')[0];
+        {            
+            a.href = "https://twitter.com/" + lines[rand].split(' ')[0];
+            a.innerText = lines[rand].split(' ')[0];
+        }
         else
-            document.getElementById("author").innerText = "Author: "+ lines[rand].split(' ')[0];
+        {
+            a.innerText = "Author: "+ lines[rand].split(' ')[0];
+        }
     }
     else
     {
