@@ -71,6 +71,6 @@ function pushToDocument(lines) {
 }
 
 async function shuffle() {
-  const text = await getListFromFile();
+  const lines = await getListFromFile();
   pushToDocument(lines);
 }
